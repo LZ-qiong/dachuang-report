@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="稀土氟化物基柔性X射线光转换层 · 实验室评估报告（报告编号 ZD-2026-XS-003）">
+<title>实验室评估报告 · 稀土氟化物基柔性X射线光转换层</title>
+<style>
+  :root {
+    --accent: #0e7c86; --accent-dark: #0a5a63; --accent-soft: #e3f4f5;
+    --ink: #17324a; --paper: #f4f7f9; --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    background: var(--paper); color: var(--ink); }
+
+  header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.93);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #dbe7ec; }
+  .head-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; padding-top: calc(10px + env(safe-area-inset-top)); }
+  .brand-mark { width: 34px; height: 34px; flex: none; border-radius: 9px;
+    background: linear-gradient(135deg, #12a4b0, #0a5a63); color: #fff; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center; letter-spacing: 1px; }
+  .head-titles { flex: 1; min-width: 0; }
+  .head-titles h1 { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .head-titles p { font-size: 11px; color: #5b7a8a; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #pageBadge { flex: none; font-size: 11.5px; font-weight: 600; color: var(--accent);
+    background: var(--accent-soft); border-radius: 999px; padding: 4px 10px; }
+
+  .hero { max-width: 900px; margin: 0 auto; padding: 18px 16px 4px; }
+  .hero h2 { font-size: 17.5px; font-weight: 800; line-height: 1.45; }
+  .hero h2 em { font-style: normal; color: var(--accent); }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .hero .meta span { font-size: 11.5px; color: #4a6b7c; background: #fff; border: 1px solid #dbe7ec;
+    border-radius: 999px; padding: 4px 10px; }
+  .hero .actions { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+  .hero a.btn { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600;
+    color: var(--accent); border: 1.5px solid var(--accent); border-radius: 999px;
+    padding: 8px 15px; text-decoration: none; }
+  .hero a.btn:active { background: var(--accent-soft); }
+  .hint { max-width: 900px; margin: 12px auto 0; padding: 0 16px; }
+  .hint div { font-size: 11.5px; color: #6b8797; background: #fffdf3; border: 1px solid #f0e6c8;
+    border-radius: 10px; padding: 9px 12px; line-height: 1.7; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 14px 10px 30px; }
+  figure.page { margin: 0 0 12px; background: var(--card); border-radius: 10px; overflow: hidden;
+    box-shadow: 0 1px 4px rgba(23,50,74,.08); position: relative; }
+  figure.page img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+  figure.page .zoom-tag { position: absolute; right: 8px; top: 8px; z-index: 2;
+    font-size: 11px; color: #fff; background: rgba(10,90,99,.72); border-radius: 999px;
+    padding: 4px 9px; pointer-events: none; }
+  figcaption { font-size: 11px; color: #8aa3b0; text-align: center; padding: 7px 0 8px; letter-spacing: .3px; }
+
+  footer { text-align: center; padding: 20px 16px 30px; font-size: 12px; color: #7a95a3; line-height: 1.8; }
+  footer .qr-tip { color: var(--accent); font-weight: 600; }
+
+  #tocFab { position: fixed; right: 16px; bottom: calc(22px + env(safe-area-inset-bottom)); z-index: 80;
+    width: 52px; height: 52px; border-radius: 50%; border: none;
+    background: linear-gradient(135deg, #12a4b0, #0a5a63); color: #fff; font-size: 13px; font-weight: 700;
+    box-shadow: 0 6px 18px rgba(10,90,99,.4); display: flex; align-items: center; justify-content: center; }
+  #tocFab:active { transform: scale(.94); }
+
+  #tocBackdrop { position: fixed; inset: 0; z-index: 90; background: rgba(10,35,45,.45);
+    opacity: 0; pointer-events: none; transition: opacity .25s; }
+  #tocBackdrop.show { opacity: 1; pointer-events: auto; }
+  #tocSheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 95; background: #fff;
+    border-radius: 20px 20px 0 0; padding: 18px 20px calc(22px + env(safe-area-inset-bottom));
+    transform: translateY(105%); transition: transform .28s cubic-bezier(.2,.8,.25,1);
+    box-shadow: 0 -10px 40px rgba(10,35,45,.18); max-height: 78vh; overflow-y: auto; }
+  #tocSheet.show { transform: translateY(0); }
+  #tocSheet h3 { font-size: 15px; margin-bottom: 4px; }
+  #tocSheet .sub { font-size: 11.5px; color: #7a95a3; margin-bottom: 12px; }
+  #tocSheet ol { list-style: none; }
+  #tocSheet li a { display: flex; align-items: center; gap: 10px; padding: 12px 6px;
+    border-bottom: 1px solid #eef3f5; text-decoration: none; color: var(--ink); font-size: 13.5px; }
+  #tocSheet li a .no { flex: none; width: 24px; height: 24px; border-radius: 7px;
+    background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; }
+  #tocSheet li a .pg { margin-left: auto; font-size: 11.5px; color: #8aa3b0; }
+
+  /* ===== 放大阅读器 ===== */
+  #viewer { position: fixed; inset: 0; z-index: 200; background: rgba(8,14,19,.97);
+    display: none; flex-direction: column; }
+  #viewer.show { display: flex; }
+  #vStage { flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center;
+    padding: 8px; touch-action: pan-x pan-y; }
+  #vStage img { max-width: none; transform-origin: center center; transition: transform .08s linear;
+    will-change: transform; user-select: none; -webkit-user-drag: none; }
+  #vBar { flex: none; display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 10px 12px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(14,26,33,.96); border-top: 1px solid #1e2b36; }
+  #vBar button { min-width: 44px; height: 40px; border-radius: 10px; border: 1px solid #2b3d4a;
+    background: #16232c; color: #dceaf0; font-size: 13px; font-weight: 600; padding: 0 12px; }
+  #vBar button:active { background: #12a4b0; border-color: #12a4b0; color: #fff; }
+  #vBar .info { color: #8fb0bd; font-size: 11.5px; margin-right: auto; padding-left: 4px; }
+  #vBar .close { margin-left: auto; background: #12a4b0; border-color: #12a4b0; color: #fff; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-inner">
+    <div class="brand-mark">测</div>
+    <div class="head-titles">
+      <h1>实验室评估报告</h1>
+      <p>稀土氟化物基柔性X射线光转换层</p>
+    </div>
+    <span id="pageBadge">第 1 / 4 页</span>
+  </div>
+</header>
+
+<div class="hero">
+  <h2><em>稀土氟化物基柔性X射线光转换层</em> · 实验室评估报告</h2>
+  <div class="meta">
+    <span>报告编号：ZD-2026-XS-003</span>
+    <span>委托方：氟光锐影项目团队</span>
+    <span>实验平台：浙江省稀土光电材料与器件重点实验室</span>
+    <span>实验周期：2026.01.12 — 2026.05.12</span>
+  </div>
+  <div class="actions">
+    <a class="btn" href="report.pdf" target="_blank" rel="noopener">📄 查看原版PDF</a>
+    <a class="btn" href="#p1">📖 直接阅读</a>
+  </div>
+</div>
+
+<div class="hint">
+  <div>💡 本报告为 <b>A4 横向</b>版面：手机上建议<b>横屏查看</b>，或<b>点击任意页面放大</b>（支持双指缩放、拖动、旋转）。</div>
+</div>
+
+<main id="reportPages">
+  <figure class="page" id="p1"><img src="pages/page01.jpg" alt="报告首页 · 一、实验概述 · 二、实验目的" loading="eager" data-page="1"><figcaption>第 1 页 · 报告首页 · 一、实验概述 · 二、实验目的</figcaption></figure>
+  <figure class="page" id="p2"><img src="pages/page02.jpg" alt="三、实验条件 · 四、实验内容与方法" loading="lazy" data-page="2"><figcaption>第 2 页 · 三、实验条件 · 四、实验内容与方法</figcaption></figure>
+  <figure class="page" id="p3"><img src="pages/page03.jpg" alt="五、实验结果与分析" loading="lazy" data-page="3"><figcaption>第 3 页 · 五、实验结果与分析</figcaption></figure>
+  <figure class="page" id="p4"><img src="pages/page04.jpg" alt="六、小试结论" loading="lazy" data-page="4"><figcaption>第 4 页 · 六、小试结论</figcaption></figure>
+</main>
+
+<footer>
+  <div class="qr-tip">📱 扫码即看 · 支持微信 / 浏览器打开</div>
+  <div>稀土氟化物基柔性X射线光转换层 · 实验室评估报告</div>
+  <div>报告编号 ZD-2026-XS-003 · 浙江省稀土光电材料与器件重点实验室</div>
+</footer>
+
+<button id="tocFab" aria-label="打开目录">目录</button>
+
+<div id="tocBackdrop"></div>
+<aside id="tocSheet" aria-label="报告目录">
+  <h3>报告目录</h3>
+  <p class="sub">共 4 页 · 点击跳转对应页</p>
+  <ol>
+<li><a href="#p1"><span class="no">1</span>报告首页 · 一、实验概述 · 二、实验目的<span class="pg">P1</span></a></li>
+    <li><a href="#p2"><span class="no">2</span>三、实验条件 · 四、实验内容与方法<span class="pg">P2</span></a></li>
+    <li><a href="#p3"><span class="no">3</span>五、实验结果与分析<span class="pg">P3</span></a></li>
+    <li><a href="#p4"><span class="no">4</span>六、小试结论<span class="pg">P4</span></a></li>
+  </ol>
+</aside>
+
+<div id="viewer">
+  <div id="vStage"><img id="vImg" src="" alt="放大查看"></div>
+  <div id="vBar">
+    <span class="info" id="vInfo">100%</span>
+    <button id="vOut">－</button>
+    <button id="vIn">＋</button>
+    <button id="vRot">↻ 旋转</button>
+    <button id="vReset">复位</button>
+    <button id="vClose" class="close">关闭</button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    /* 页码指示 */
+    var badge = document.getElementById('pageBadge');
+    var figures = Array.prototype.slice.call(document.querySelectorAll('main figure.page'));
+    var TOTAL = figures.length, current = 0;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var idx = figures.indexOf(e.target);
+          if (idx >= 0 && idx !== current) {
+            current = idx;
+            badge.textContent = '第 ' + (idx + 1) + ' / ' + TOTAL + ' 页';
+          }
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    figures.forEach(function (f) { obs.observe(f); });
+
+    /* 目录抽屉 */
+    var fab = document.getElementById('tocFab'), sheet = document.getElementById('tocSheet'),
+        backdrop = document.getElementById('tocBackdrop');
+    function openToc() { sheet.classList.add('show'); backdrop.classList.add('show'); }
+    function closeToc() { sheet.classList.remove('show'); backdrop.classList.remove('show'); }
+    fab.addEventListener('click', openToc);
+    backdrop.addEventListener('click', closeToc);
+    sheet.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeToc); });
+
+    /* ===== 放大阅读器 ===== */
+    var viewer = document.getElementById('viewer'), vImg = document.getElementById('vImg'),
+        vStage = document.getElementById('vStage'), vInfo = document.getElementById('vInfo');
+    var scale = 1, rot = 0, baseW = 0;
+
+    function apply() {
+      vImg.style.transform = 'rotate(' + rot + 'deg) scale(' + scale + ')';
+      vInfo.textContent = Math.round(scale * 100) + '%';
+    }
+    function fit() {
+      var avail = vStage.clientWidth - 16;
+      var iw = vImg.naturalWidth || 1;
+      baseW = Math.min(avail, iw);
+      vImg.style.width = baseW + 'px';
+      vImg.style.height = 'auto';
+      scale = 1; rot = 0; apply();
+    }
+    function open(src) {
+      vImg.src = src;
+      viewer.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      if (vImg.complete) { fit(); } else { vImg.onload = fit; }
+    }
+    function close() {
+      viewer.classList.remove('show');
+      document.body.style.overflow = '';
+      vImg.src = '';
+    }
+    document.querySelectorAll('figure.page img').forEach(function (img) {
+      img.addEventListener('click', function () { open(img.src); });
+    });
+    document.getElementById('vIn').addEventListener('click', function () { scale = Math.min(scale * 1.35, 8); apply(); });
+    document.getElementById('vOut').addEventListener('click', function () { scale = Math.max(scale / 1.35, 0.4); apply(); });
+    document.getElementById('vRot').addEventListener('click', function () { rot = (rot + 90) % 360; apply(); });
+    document.getElementById('vReset').addEventListener('click', fit);
+    document.getElementById('vClose').addEventListener('click', close);
+    viewer.addEventListener('click', function (e) { if (e.target === viewer) close(); });
+
+    /* 滚轮缩放 */
+    vStage.addEventListener('wheel', function (e) {
+      if (!viewer.classList.contains('show')) return;
+      e.preventDefault();
+      scale = Math.max(0.4, Math.min(scale * (e.deltaY < 0 ? 1.12 : 0.89), 8));
+      apply();
+    }, { passive: false });
+
+    /* 双指缩放 + 双击缩放 */
+    var pinchStart = null, lastTap = 0;
+    vStage.addEventListener('touchstart', function (e) {
+      if (e.touches.length === 2) {
+        pinchStart = { d: Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                                    e.touches[0].clientY - e.touches[1].clientY), s: scale };
+      } else if (e.touches.length === 1) {
+        var now = Date.now();
+        if (now - lastTap < 300) {
+          scale = scale > 1.2 ? 1 : 2.2; apply(); lastTap = 0;
+        } else { lastTap = now; }
+      }
+    }, { passive: true });
+    vStage.addEventListener('touchmove', function (e) {
+      if (e.touches.length === 2 && pinchStart) {
+        e.preventDefault();
+        var d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                           e.touches[0].clientY - e.touches[1].clientY);
+        scale = Math.max(0.4, Math.min(pinchStart.s * d / pinchStart.d, 8));
+        apply();
+      }
+    }, { passive: false });
+    vStage.addEventListener('touchend', function () { pinchStart = null; }, { passive: true });
+    document.addEventListener('keydown', function (e) {
+      if (!viewer.classList.contains('show')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === '+' || e.key === '=') { scale = Math.min(scale * 1.35, 8); apply(); }
+      if (e.key === '-') { scale = Math.max(scale / 1.35, 0.4); apply(); }
+    });
+  })();
+</script>
+</body>
+</html>
